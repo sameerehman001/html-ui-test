@@ -282,6 +282,7 @@ body {
 
 .card-wrap {
     padding: 30px;
+    height: 220px;
     background-color: #606060;
     color: white;
     border-radius: 10px;
