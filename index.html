@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nested Sidebar Accordion</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <div class="d-flex">
+    <div class="sidebar">
+      <div class="logo">
+        <div class="sidebarlogowrap">
+          <img src="./images/Stonefly-logo-01 1.png" class="sidebarlogowrap-img mb-2" alt="logo">
+        </div>
+        <div>SC-172-125-62-131</div>
+        <small>Administrator</small>
+      </div>
+
+      <div class="accordion" id="sidebarMenu">
+        <!-- SAN -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingSan">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseSan">
+              SAN
+            </button>
+          </h2>
+          <div id="collapseSan" class="accordion-collapse collapse show">
+            <div class="accordion-body">
+              <div class="accordion" id="sanSubMenu">
+                <!-- Volume with sub items -->
+                <div style="margin-left: 10px;">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingVolume">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseVolume">
+                        Volume
+                      </button>
+                    </h2>
+                    <div id="collapseVolume" class="accordion-collapse collapse" data-bs-parent="#sanSubMenu">
+                      <div class="accordion-body submenu">
+                        <a href="#">Create New Volume</a>
+                        <a href="#">Auto Create</a>
+                        <a href="#">Manual Create</a>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <!-- Host -->
+                <div class="submenu">
+                  <a href="#">Host</a>
+                  <a href="#">Sessions</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr />
+
+        <!-- NAS -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingNas">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseNas">
+              NAS
+            </button>
+          </h2>
+          <div id="collapseNas" class="accordion-collapse collapse show">
+            <div class="accordion-body submenu">
+              <a href="#">Segments</a>
+              <a href="#">Antivirus</a>
+              <a href="#">Scaleout</a>
+            </div>
+          </div>
+        </div>
+        <hr />
+
+        <!-- Resources -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingResources">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseResources">
+              Resources
+            </button>
+          </h2>
+          <div id="collapseResources" class="accordion-collapse collapse show">
+            <div class="accordion-body submenu">
+              <a href="#">Create Flash Cache</a>
+              <a href="#">Flash Cache Configuration</a>
+              <a href="#">Create Object Storage</a>
+              <a href="#">Detail</a>
+            </div>
+          </div>
+        </div>
+        <hr />
+
+        <!-- System -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingSystem">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseSystem">
+              System
+            </button>
+          </h2>
+          <div id="collapseSystem" class="accordion-collapse collapse show">
+            <div class="accordion-body submenu">
+              <a href="#">Admin</a>
+              <a href="#">Network</a>
+              <a href="#">IDiagnostics</a>
+              <a href="#">Notifications</a>
+              <a href="#">UPS</a>
+              <a href="#">Users</a>
+            </div>
+          </div>
+        </div>
+        <hr />
+
+        <!-- Reports -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingReports">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseReports">
+              Reports
+            </button>
+          </h2>
+          <div id="collapseReports" class="accordion-collapse collapse show">
+            <div class="accordion-body submenu">
+              <a href="#">Log</a>
+              <a href="#">Configuration Report</a>
+              <a href="#">Historical Statistics</a>
+              <a href="#">Debug Logs</a>
+              <a href="#">Live Statistics</a>
+            </div>
+          </div>
+        </div>
+        <hr />
+
+      </div>
+    </div>
+
+    <!-- main image start -->
+    <div class="maincontent">
+      <div class="top-section1">
+        <div class="section1-left">
+          <div class="image-wrap">
+            <img src="./images/Ellipse 15.png" alt="img" class="image1" />
+          </div>
+          <div class="imgSection-right">
+            <p class="welcome-text">Welcome</p>
+            <p class="below-welcome-text">SC-172-125-82-211</p>
+            <div class="good-wrap">
+              <p>Status</p>
+              <div class="good-text">Good</div>
+            </div>
+          </div>
+        </div>
+        <div class="section1-right">
+          <div class="support-text">Support</div>
+          <div class="power-btn-wrap">
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-power"
+              viewBox="0 0 16 16">
+              <path d="M7.5 1v7h1V1z" />
+              <path d="M3 8.812a5 5 0 0 1 2.578-4.375l-.485-.874A6 6 0 1 0 11 3.616l-.501.865A5 5 0 1 1 3 8.812" />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="dashboard-heading">
+        <p>Dashboard</p>
+      </div>
+      <hr class="hr-styling" />
+      <!-- logo section start -->
+      <div class="logoSection-wrap">
+        <div class="container">
+          <div class="row align-center">
+            <div class="col">
+              <div class="infoSection-wrap">
+                <h4 class="info-tet">Information</h4>
+                <div class="arrow-img">
+                  <img src="./images/Group 581.png" alt="img" />
+
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="logo-individual">
+                <img src="./images/OBJECTS.png" alt="logo1" />
+                <div class="logosection-textwrap">
+                  <p class="fw-bold">ISCSI SAN IP:</p>
+                  <p>192.168.10.255</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="logo-individual">
+                <img src="./images/Asset 2 1.png" alt="logo1" />
+                <div class="logosection-textwrap">
+                  <p class="fw-bold">NAS LAN IP:</p>
+                  <p>192.168.10.255</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="logo-individual">
+                <img src="./images/Asset 3 1.png" alt="logo1" />
+                <div class="logosection-textwrap">
+                  <p class="fw-bold">ISCSI LAN IP:</p>
+                  <p>192.168.10.255</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- logo section end -->
+
+      <div class="measuring-section">
+        <div class="trigangle-left">
+          <img src="./images/Layer 3.png" style="width: 100%; object-fit: cover;" />
+        </div>
+        <div class="trigangle-right">
+          <img src="./images/Layer 2.png" style="width: 100%; object-fit: cover;" />
+        </div>
+
+        <!-- <div class="measuring-swrap">
+          <div>1</div>
+          <div>2</div>
+        </div> -->
+
+        <div>
+          <div style="display: flex; width: 100%;">
+            <div style="width: 50%; display: flex; justify-content: center;">
+              <div>
+                <div style="display: flex; justify-content: center; margin-top: 35px;">
+                  <p>CPU & Memory</p>
+                </div>
+                <div style="display: flex; justify-content: center;">
+                  <div>
+                    <div class="speedo">
+                      <div class="face">
+                        <div class="needle"></div>
+                      </div>
+                    </div>
+
+                    <!-- <h3>Choose your speed...</h3> -->
+
+                    <form>
+                      <input class="speed" name="speed" type="radio" value="slow"> CPU<br>
+                      <!--   <input class="speed" name="speed" type="radio" value="medium"> Medium<br>
+                  <input class="speed" name="speed" type="radio" value="fast"> Fast -->
+                    </form>
+                  </div>
+                  <!-- 2nd guage -->
+                  <div>
+                    <div class="speedo1">
+                      <div class="face1">
+                        <div class="needle1"></div>
+                      </div>
+                    </div>
+
+                    <!-- <h3>Choose your speed...</h3> -->
+
+                    <form>
+                      <input class="speed" name="speed" type="radio" value="slow"> Memory<br>
+                      <!--   <input class="speed" name="speed" type="radio" value="medium"> Medium<br>
+                  <input class="speed" name="speed" type="radio" value="fast"> Fast -->
+                    </form>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div style="
+    width: 2px;
+    background-color: #000;
+    margin: 80px 20px 30px 20px;
+    height: auto;
+  "></div>
+            <div style="width: 50%; display: flex; justify-content: center;">
+              <!-- <p>Network Utilization</p> -->
+              <div>
+                <div style="display: flex; justify-content: center; margin-top: 35px;">
+                  <p>Network Utilization</p>
+                </div>
+                <div style="display: flex; justify-content: center;">
+                  <!-- 1st guage -->
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-md-6 col-sm-6">
+                        <div class="progress blue">
+                          <span class="progress-left">
+                            <span class="progress-bar"></span>
+                          </span>
+                          <span class="progress-right">
+                            <span class="progress-bar"></span>
+                          </span>
+                          <div class="progress-value">90%</div>
+                        </div>
+                      </div>
+
+                      <div class="col-md-6 col-sm-6">
+                        <div class="progress pink">
+                          <span class="progress-left">
+                            <span class="progress-bar"></span>
+                          </span>
+                          <span class="progress-right">
+                            <span class="progress-bar"></span>
+                          </span>
+                          <div class="progress-value">60%</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- card destion start -->
+
+
+      <div style="display: flex; gap: 10px; width: 100%; margin-top: 10px;">
+        <div style="width: 33%;">
+          <div class="card-wrap">
+            <h1 class="cardMain_heading">Concentrator Type</h1>
+            <div class="card-lowerSection">
+              <div class="lowerSection-text">
+                <p>Name: SC-192-168-10-250</p>
+                <p>MGMT: 192.168.10.250</p>
+                <p>ISCSI IP: 192.168.10.250</p>
+              </div>
+              <div class="card-imgwrap">
+                <img src="./images/01-05-GUI-13 1.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="width: 33%; ">
+          <div class="card-wrap">
+            <h1 class="cardMain_heading">Quick Links</h1>
+            <div class="card-lowerSection">
+              <!-- <div class="lowerSection-text">
+                <p>Name: SC-192-168-10-250</p>
+                <p>MGMT: 192.168.10.250</p>
+                <p>ISCSI IP: 192.168.10.250</p>
+              </div> -->
+              <div style="display: flex; flex-direction: column; font-weight: 700; width: 40%;">
+                <div>Customer</div>
+                <div>Support</div>
+              </div>
+              <div class="card-imgwrap">
+                <img src="./images/01-05-GUI-17 1.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="width: 33%;">
+          <div class="card-wrap">
+            <h1 class="cardMain_heading">Discovered SC’s</h1>
+            <div class="card-lowerSection">
+              <div class="lowerSection-text">
+                <p>SC-192-168-10-250</p>
+                <p>SC-192-168-10-250</p>
+                <div class="card-button-open">Open</div>
+              </div>
+              <div class="card-imgwrap">
+                <img src="./images/01-05-GUI-12 1.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- card section end -->
+
+      <div class="container resource-container">
+        <div style="display: flex; justify-content: space-between;">
+          <div class="resource-tab-label">Resources</div>
+
+          <div class="resource-legend mb-3 text-end">
+            <span><span class="resource-legend-box resource-used-box"></span>Used</span>
+            <span><span class="resource-legend-box resource-available-box"></span>Available</span>
+            <span><span class="resource-legend-box resource-not-managed-box"></span>Not Managed</span>
+          </div>
+
+        </div>
+
+        <div class="resource-card">
+          <table class="table resource-table mb-0">
+            <thead>
+              <tr>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Path</th>
+                <th>Total Space<br />(GiB)</th>
+                <th>Used<br />(GiB)</th>
+                <th>Free<br />(GiB)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Lorem Ipsem</td>
+                <td>Lorem Ipsem</td>
+                <td>Lorem Ipsem</td>
+                <td>Lorem Ipsem</td>
+                <td>Lorem Ipsem</td>
+                <td>Lorem Ipsem</td>
+              </tr>
+              <tr>
+                <td colspan="6">
+                  <div class="resource-progress">
+                    <div class="progress-bar resource-bar-used" style="width: 91%">91%</div>
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td>Lorem Ipsem</td>
+                <td>Lorem Ipsem</td>
+                <td>Lorem Ipsem</td>
+                <td>Lorem Ipsem</td>
+                <td>Lorem Ipsem</td>
+                <td>Lorem Ipsem</td>
+              </tr>
+              <tr>
+                <td colspan="6">
+                  <div class="resource-progress">
+                    <div class="progress-bar resource-bar-used" style="width: 56%">56%</div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>Lorem Ipsem</td>
+                <td>Lorem Ipsem</td>
+                <td>Lorem Ipsem</td>
+                <td>Lorem Ipsem</td>
+                <td>Lorem Ipsem</td>
+                <td>Lorem Ipsem</td>
+              </tr>
+              <tr>
+                <td colspan="6">
+                  <div class="resource-progress">
+                    <div class="progress-bar resource-bar-used" style="width: 50%">50%</div>
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td>Lorem Ipsem</td>
+                <td>Lorem Ipsem</td>
+                <td>Lorem Ipsem</td>
+                <td>Lorem Ipsem</td>
+                <td>Lorem Ipsem</td>
+                <td>Lorem Ipsem</td>
+              </tr>
+              <tr>
+                <td colspan="6">
+                  <div class="resource-progress">
+                    <div class="progress-bar resource-bar-used" style="width: 91%">91%</div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- table section end  -->
+
+    </div>
+
+    <!-- main image stop -->
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
